@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/14 13:51:49 by tclavet           #+#    #+#             */
+/*   Updated: 2018/04/14 13:59:25 by tclavet          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int	ft_sqrt(int nb)
@@ -6,23 +18,11 @@ int	ft_sqrt(int nb)
 
 	i = 1;
 	if (nb <= 0)
-		return(0);
+		return (0);
 	while (i * i < nb)
 		i++;
 	if (i * i == nb)
-		return(i);
+		return (i);
 	else
-		return(0);
-}
-
-#include <stdio.h>
-
-int	main()
-{
-	printf("%d\n", ft_sqrt(2));
-	printf("%d\n", ft_sqrt(16));
-	printf("%d\n", ft_sqrt(25));
-	printf("%d\n", ft_sqrt(565));
-	printf("%d\n", ft_sqrt(-432));
-	printf("%d\n", ft_sqrt(-16));
+		return (0);
 }

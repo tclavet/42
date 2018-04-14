@@ -1,20 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tclavet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/14 13:54:24 by tclavet           #+#    #+#             */
+/*   Updated: 2018/04/14 14:01:59 by tclavet          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (str[i])
 		i++;
-	return(i);
+	return (i);
 }
 
-char 	*ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
-	int	len;
+	int		len;
 	char	*cmp;
-	int	i;
+	int		i;
 
 	i = 0;
 	len = ft_strlen(src);
@@ -22,11 +34,4 @@ char 	*ft_strdup(char *src)
 	while (i < len)
 		cmp[i] = src[i++];
 	return (cmp);
-}
-
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	printf("%s\n", ft_strdup(argv[1]));
 }
